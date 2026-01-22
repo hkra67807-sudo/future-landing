@@ -21,6 +21,7 @@ body{
   background:linear-gradient(120deg,#0f172a,#1e293b);
   color:white;
   scroll-behavior:smooth;
+  padding-top:80px; /* تعويض عن ارتفاع header */
 }
 
 /* Header والقائمة */
@@ -47,14 +48,14 @@ nav{
   display:flex;
   flex-wrap:wrap;
   justify-content:flex-end;
-  gap:15px; /* مسافة متساوية بين الروابط */
+  gap:15px;
 }
 
 nav a{
   color:white;
   text-decoration:none;
   opacity:.8;
-  padding:5px 10px; /* مساحة داخلية صغيرة */
+  padding:5px 10px;
   transition:.3s;
 }
 
@@ -71,6 +72,7 @@ section{
   justify-content:center;
   flex-direction:column;
   text-align:center;
+  scroll-margin-top:80px; /* تعويض عند Scroll */
 }
 
 .hero h1{
@@ -130,6 +132,24 @@ section{
   box-shadow:0 0 15px var(--main);
 }
 
+/* المهارات */
+.skills .cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+  margin-top:30px;
+}
+.skill{
+  background:var(--card);
+  padding:15px;
+  border-radius:15px;
+  transition:transform 0.3s,box-shadow 0.3s;
+}
+.skill:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 12px var(--main);
+}
+
 /* الفوتر */
 footer{
   text-align:center;
@@ -160,6 +180,7 @@ footer{
   <nav>
     <a href="#hero">الرئيسية</a>
     <a href="#services">مميزات القالب</a>
+    <a href="#skills">مهاراتي</a>
     <a href="#contact">تواصل</a>
   </nav>
 </header>
@@ -180,6 +201,17 @@ footer{
     <div class="service">تصميم متجاوب لكل الشاشات</div>
     <div class="service">سرعة تحميل ممتازة</div>
     <div class="service">ألوان جذابة وعصرية</div>
+  </div>
+  <a class="btn" href="#hero" style="margin-top:20px;">⬆ رجوع للرئيسية</a>
+</section>
+
+<section id="skills" class="skills">
+  <h2>مهاراتي</h2>
+  <div class="cards">
+    <div class="skill">HTML & CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Responsive Design</div>
+    <div class="skill">Git & GitHub</div>
   </div>
   <a class="btn" href="#hero" style="margin-top:20px;">⬆ رجوع للرئيسية</a>
 </section>
