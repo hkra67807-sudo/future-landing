@@ -35,6 +35,7 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  flex-wrap:wrap;
 }
 
 nav a{
@@ -43,12 +44,19 @@ nav a{
   text-decoration:none;
 }
 
+section{
+  padding:60px 20px;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:30px;
+}
+
 .hero{
-  min-height:85vh;
   display:flex;
   align-items:center;
   justify-content:space-around;
-  padding:40px;
   flex-wrap:wrap;
 }
 
@@ -66,7 +74,37 @@ nav a{
   object-fit:cover;
   border-radius:50%;
   border:3px solid var(--main);
-  margin-top:15px;
+  display:block;
+  margin:20px auto;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 25px;
+  background:var(--main);
+  color:black;
+  border-radius:30px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+
+.skill{
+  background:var(--card);
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
 }
 
 @media(max-width:768px){
@@ -83,27 +121,48 @@ nav a{
 <header>
   <b>قالب المستقبل</b>
   <nav>
-    <a href="#">الرئيسية</a>
-    <a href="#">من أنا</a>
-    <a href="#">مهاراتي</a>
+    <a href="#hero">الرئيسية</a>
+    <a href="#about">من أنا</a>
+    <a href="#skills">مهاراتي</a>
   </nav>
 </header>
 
-<section class="hero">
+<!-- قسم Hero -->
+<section class="hero" id="hero">
   <div>
     <h1>قالب المستقبل</h1>
     <p>تصميم خفيف ومتجاوب لكل الأجهزة</p>
+    <a href="#skills" class="btn">شوف مهاراتي</a>
   </div>
 
   <div class="hero-card">
     <h3>مرحبا بك</h3>
+    <img src="./images/future-header.png" alt="Hero Image" class="hero-img">
+  </div>
+</section>
 
-    <img 
-      src="./cmcevywpp2jfskc0dz28u3g9m-lora-2-0.png/cmcevywpp2jfskc0dz28u3g9m-lora-2-0.png"
-      alt="Hero Image"
-      class="hero-img"
-    >
+<!-- قسم About -->
+<section id="about">
+  <h2>من أنا</h2>
+  <p style="text-align:center; max-width:600px; margin:0 auto;">
+    أنا مطور مواقع، أستخدم HTML و CSS وأعمل تصميمات متجاوبة وسريعة.
+  </p>
+  <div style="text-align:center; margin-top:20px;">
+    <a href="#hero" class="btn">⬆ العودة للرئيسية</a>
+  </div>
+</section>
 
+<!-- قسم Skills -->
+<section id="skills">
+  <h2>مهاراتي</h2>
+  <div class="skills">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">Responsive Design</div>
+    <div class="skill">JavaScript</div>
+  </div>
+  <div style="text-align:center; margin-top:20px;">
+    <a href="#hero" class="btn">⬆ العودة للرئيسية</a>
   </div>
 </section>
 
