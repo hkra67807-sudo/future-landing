@@ -22,7 +22,8 @@ body{
   background:linear-gradient(120deg,#0f172a,#1e293b);
   color:var(--text);
   scroll-behavior:smooth;
-  padding-top:90px;
+  padding-top:90px; /* تعويض عن ارتفاع header */
+  font-size:16px;
 }
 
 /* Header */
@@ -77,7 +78,8 @@ section{
 
 /* Hero */
 .hero h1{
-  font-size:48px;
+  font-size:4vw;
+  min-font-size:32px;
   line-height:1.2;
 }
 .hero h1 span{
@@ -85,7 +87,8 @@ section{
 }
 .hero p{
   margin-top:15px;
-  font-size:18px;
+  font-size:1.2vw;
+  min-font-size:16px;
   opacity:.85;
   max-width:600px;
 }
@@ -107,7 +110,9 @@ section{
 
 /* Hero image */
 .hero-img-container{
-  width:200px;
+  width:25vw;
+  max-width:220px;
+  min-width:150px;
   height:auto;
   margin-top:30px;
   border-radius:50%;
@@ -118,15 +123,15 @@ section{
   width:100%;
   height:auto;
   display:block;
-  max-width:200px;
   margin:0 auto;
 }
 
 /* Services */
 .services h2, .skills h2, .contact h2{
-  font-size:36px;
-  margin-bottom:25px;
+  font-size:3vw;
+  min-font-size:28px;
   color:var(--main);
+  margin-bottom:25px;
 }
 .services .cards{
   display:grid;
@@ -136,9 +141,10 @@ section{
 }
 .service{
   background:var(--card);
-  padding:25px;
+  padding:2vw;
   border-radius:20px;
   font-weight:500;
+  font-size:1.1vw;
   transition:transform 0.3s,box-shadow 0.3s;
 }
 .service:hover{
@@ -155,9 +161,10 @@ section{
 }
 .skill{
   background:var(--card);
-  padding:20px;
+  padding:2vw;
   border-radius:20px;
   font-weight:500;
+  font-size:1.1vw;
   transition:transform 0.3s,box-shadow 0.3s;
 }
 .skill:hover{
@@ -167,7 +174,8 @@ section{
 
 /* Contact */
 .contact p{
-  font-size:18px;
+  font-size:1.2vw;
+  min-font-size:16px;
   opacity:.85;
   margin-bottom:20px;
 }
@@ -196,14 +204,16 @@ footer{
   nav{
     justify-content:flex-start;
   }
-  .hero-img-container img{
-    max-width:150px;
-  }
+  .hero h1{ font-size:32px; }
+  .hero p{ font-size:16px; }
+  .hero-img-container img{ max-width:150px; }
+  .service, .skill{ font-size:14px; padding:15px; }
 }
 @media(min-width:1200px){
-  .hero-img-container img{
-    max-width:220px;
-  }
+  .hero h1{ font-size:48px; }
+  .hero p{ font-size:20px; }
+  .hero-img-container img{ max-width:220px; }
+  .service, .skill{ font-size:18px; padding:25px; }
 }
 </style>
 </head>
