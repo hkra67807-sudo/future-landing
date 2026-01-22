@@ -2,7 +2,7 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>عمران مجيب - قالب المستقبل</title>
+<title>قالب المستقبل - عمران مجيب</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- خط عربي -->
@@ -31,6 +31,7 @@ body{
   color:white;
 }
 
+/* Header */
 header{
   position:sticky;
   top:0;
@@ -56,6 +57,7 @@ nav a:hover{
   color:var(--main);
 }
 
+/* Sections */
 section{
   padding:80px 20px;
   display:flex;
@@ -71,6 +73,7 @@ h1,h2,h3{
   margin-bottom:20px;
 }
 
+/* Hero Section */
 .hero{
   display:flex;
   align-items:center;
@@ -80,13 +83,13 @@ h1,h2,h3{
   margin-bottom:60px;
 }
 
-/* الاسم المميز */
+/* الاسم المميز فقط في Hero */
 .hero-name-card{
   background:linear-gradient(45deg, #f97316, #ffb347);
   padding:20px 40px;
   border-radius:20px;
   box-shadow:0 10px 25px #0008;
-  display:inline-block;
+  display:block;
   text-align:center;
   transition:transform 0.3s, box-shadow 0.3s;
   margin:0 auto 30px auto;
@@ -103,6 +106,7 @@ h1,h2,h3{
   box-shadow:0 15px 35px #000a;
 }
 
+/* Hero Card */
 .hero-card{
   background:var(--card);
   padding:40px;
@@ -128,6 +132,7 @@ h1,h2,h3{
   margin:20px auto;
 }
 
+/* Buttons */
 .btn{
   display:inline-block;
   margin-top:20px;
@@ -145,6 +150,7 @@ h1,h2,h3{
   background:var(--secondary);
 }
 
+/* Skills */
 .skills{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -171,6 +177,7 @@ h1,h2,h3{
   box-shadow:0 10px 25px #0006;
 }
 
+/* Paragraphs */
 p{
   line-height:1.8;
   max-width:700px;
@@ -178,6 +185,7 @@ p{
   text-align:center;
 }
 
+/* Responsive */
 @media(max-width:1024px){
   .hero{
     flex-direction:column;
@@ -202,8 +210,9 @@ p{
 
 <body>
 
+<!-- Header -->
 <header>
-  <b>عمران مجيب</b>
+  <b>قالب المستقبل</b>
   <nav>
     <a href="#hero">الرئيسية</a>
     <a href="#about">من أنا</a>
@@ -215,16 +224,18 @@ p{
 <section id="hero">
   <div class="container hero">
     
-    <!-- الاسم المميز -->
+    <!-- الاسم المميز فقط هنا -->
     <div class="hero-name-card">
       <h1>عمران مجيب</h1>
     </div>
 
+    <!-- نص ترحيبي -->
     <div>
       <p>مرحبا بك في صفحتي، هذه مسيرتي في البرمجة والتصميم. أحب تصميم مواقع متجاوبة واحترافية.</p>
       <a href="#skills" class="btn">شوف مهاراتي</a>
     </div>
 
+    <!-- بطاقة صورة -->
     <div class="hero-card">
       <h3>أنا مطور مواقع</h3>
       <img src="./images/future-header.png" alt="Hero Image" class="hero-img">
