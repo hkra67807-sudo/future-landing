@@ -64,7 +64,7 @@ section{
 
 .container{
   width:100%;
-  max-width:1100px; /* يحافظ على ترتيب جيد للشاشات الكبيرة */
+  max-width:1100px;
 }
 
 h1,h2,h3{
@@ -78,6 +78,29 @@ h1,h2,h3{
   flex-wrap:wrap;
   gap:40px;
   margin-bottom:60px;
+}
+
+/* الاسم المميز */
+.hero-name-card{
+  background:linear-gradient(45deg, #f97316, #ffb347);
+  padding:20px 40px;
+  border-radius:20px;
+  box-shadow:0 10px 25px #0008;
+  display:inline-block;
+  text-align:center;
+  transition:transform 0.3s, box-shadow 0.3s;
+  margin:0 auto 30px auto;
+}
+
+.hero-name-card h1{
+  font-size:3rem;
+  font-weight:900;
+  color:white;
+}
+
+.hero-name-card:hover{
+  transform:scale(1.1);
+  box-shadow:0 15px 35px #000a;
 }
 
 .hero-card{
@@ -170,6 +193,9 @@ p{
     width:160px;
     height:160px;
   }
+  .hero-name-card h1{
+    font-size:2rem;
+  }
 }
 </style>
 </head>
@@ -185,10 +211,16 @@ p{
   </nav>
 </header>
 
+<!-- Hero Section -->
 <section id="hero">
   <div class="container hero">
-    <div>
+    
+    <!-- الاسم المميز -->
+    <div class="hero-name-card">
       <h1>عمران مجيب</h1>
+    </div>
+
+    <div>
       <p>مرحبا بك في صفحتي، هذه مسيرتي في البرمجة والتصميم. أحب تصميم مواقع متجاوبة واحترافية.</p>
       <a href="#skills" class="btn">شوف مهاراتي</a>
     </div>
@@ -200,6 +232,7 @@ p{
   </div>
 </section>
 
+<!-- About Section -->
 <section id="about">
   <div class="container">
     <h2>من أنا</h2>
@@ -211,6 +244,7 @@ p{
   </div>
 </section>
 
+<!-- Skills Section -->
 <section id="skills">
   <div class="container">
     <h2>مهاراتي</h2>
